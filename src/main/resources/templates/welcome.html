@@ -23,7 +23,7 @@
         <center>
             <h2 class="" style="color: #ffff;">Les informations sûres sur le Coronavirus en Guinée<small style="font-size: 11pt;"></small></h2>
         </center>
-        <div class="row h-100 justify-content-center align-items-center">
+        <!--<div class="row h-100 justify-content-center align-items-center">
 
             <div class="col-md-4 my-auto">
                 <div class="card">
@@ -49,13 +49,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-md-4 my-auto">
                 <div class="card">
                     <div class="container">
                         <span th:text="${statistics.cases}" class="css-tt00ea text-yellow"></span>
-                        <p class="css-16iau3h">Cumul des cas</p>
+                        <p class="css-16iau3h">Infectés</p>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 <div class="card">
                     <div class="container">
                         <span th:text="${statistics.recovered}" class="css-tt00ea text-success"></span>
-                        <p class="css-16iau3h">Cumul des guéris</p>
+                        <p class="css-16iau3h">Guéris</p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                 <div class="card">
                     <div class="container">
                         <span th:text="${statistics.deaths}"  class="css-tt00ea text-danger"></span>
-                        <p class="css-16iau3h">Cumul des décès</p>
+                        <p class="css-16iau3h">Décès</p>
                     </div>
                 </div>
             </div>
