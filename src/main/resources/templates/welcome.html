@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>COVID19GN</title>
+
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/4.2.1/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+<!--<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="#"></a>
+</nav>-->
+
+<main role="main" class="container">
+    <h1>&nbsp;</h1>
+    <div class="container mt-5">
+        <center>
+            <h2 class="" style="color: #ffff;">Les informations sûres sur le Coronavirus en Guinée<small style="font-size: 11pt;"></small></h2>
+        </center>
+        <div class="row h-100 justify-content-center align-items-center">
+
+            <div class="col-md-4 my-auto">
+                <div class="card">
+                    <div class="container">
+                        <span th:text="${statistics.todayCases}" class="css-tt00ea text-yellow"></span>
+                        <p class="css-16iau3h">Cas du jour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="container">
+                        <span class="css-tt00ea text-success">0</span>
+                        <p class="css-16iau3h">Guéris du jour</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="container">
+                        <span th:text="${statistics.todayDeaths}" class="css-tt00ea text-danger"></span>
+                        <p class="css-16iau3h">Décès du jour</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-md-4 my-auto">
+                <div class="card">
+                    <div class="container">
+                        <span th:text="${statistics.cases}" class="css-tt00ea text-yellow"></span>
+                        <p class="css-16iau3h">Cumul des cas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="container">
+                        <span th:text="${statistics.recovered}" class="css-tt00ea text-success"></span>
+                        <p class="css-16iau3h">Cumul des guéris</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="container">
+                        <span th:text="${statistics.deaths}"  class="css-tt00ea text-danger"></span>
+                        <p class="css-16iau3h">Cumul des décès</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4" style="display: flex; justify-content: flex-end"><small class="text-light text-right text-muted">Dernière mise à jour: <span th:text="${date}"></span></small></div>
+    </div>
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

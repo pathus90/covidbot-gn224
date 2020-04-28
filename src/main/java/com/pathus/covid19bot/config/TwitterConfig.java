@@ -27,7 +27,6 @@ public class TwitterConfig {
     TwitterTemplate getTwtTemplate(){
         template = new TwitterTemplate(consumerKey, consumerSecret, accessToken, accessTokenSecret);
         template.setRequestFactory(new HttpComponentsClientHttpRequestFactory());
-        template.getRestTemplate().getInterceptors().add (0, new ContentTypeInterceptor());
         return template;
     }
 }
