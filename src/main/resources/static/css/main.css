@@ -1,0 +1,81 @@
+ body {
+            background: #22272c;
+            width: 1280px;
+            height: 440px;
+            font-family: 'IBM Plex Mono', monospace;
+        }
+
+        .card {
+            margin-top: 20px;
+            text-align: center;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 27px;
+            padding-right: 27px;
+            padding-top: 29px;
+            /* padding-bottom: 20px; */
+            background-color: #282d33;
+            border-radius: 6px;
+        }
+
+        .css-tt00ea {
+            font-size: 50px;
+            line-height: 40px;
+            display: block;
+        }
+
+        .text-yellow {
+            color: #f2c94c;
+            !important
+        }
+
+        .text-warning {
+            color: #f5a623;
+            !important
+        }
+
+        .text-success {
+            color: #219653;
+            !important
+        }
+
+        .text-danger {
+            color: #d8232a;
+            !important
+        }
+
+        .css-16iau3h {
+            line-height: 45px;
+            display: block;
+            margin-top: 4px;
+            color: #e1e2e6;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .my-auto {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .starter-template {
+          padding: 3rem 1.5rem;
+          text-align: center;
+        }
+
+        h1{
+        	color:#0000FF;
+        }
+
+        h2{
+        	color:#FF0000;
+        }

@@ -15,6 +15,14 @@ public class Statistics {
     private int totalTests;
     private int testsPerOneMillion;
 
+    public Statistics() {
+    }
+
+    public Statistics(int cases, int deaths, int recovered) {
+        this.cases = cases;
+        this.deaths = deaths;
+        this.recovered = recovered;
+    }
 
     public String getCountry() {
         return country;

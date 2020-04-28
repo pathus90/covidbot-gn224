@@ -13,7 +13,6 @@ public class Scheduler {
 
     @Scheduled(cron = "${bot.cron}")
     public void cronJobSch() {
-
         twitterService.processPostTweet();
     }
 }
