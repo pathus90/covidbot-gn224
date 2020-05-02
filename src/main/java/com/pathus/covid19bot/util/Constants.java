@@ -27,7 +27,7 @@ public final class Constants {
     /**
      * The default image path integrated to the tweet.
      */
-    public static final String DEFAULT_IMG_PATH = "images/COVID19.jpeg";
+    public static final String DEFAULT_IMG_PATH = "images/covid19.jpg";
 
     private Constants(){}
 
