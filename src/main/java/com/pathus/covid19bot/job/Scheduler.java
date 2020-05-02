@@ -11,7 +11,7 @@ public class Scheduler {
     @Autowired
     private ITwitterService twitterService;
 
-    @Scheduled(cron = "${bot.cron}")
+    @Scheduled(cron = "${bot.cron}", zone = "Africa/Conakry")
     public void cronJobSch() {
         twitterService.processPostTweet();
     }
