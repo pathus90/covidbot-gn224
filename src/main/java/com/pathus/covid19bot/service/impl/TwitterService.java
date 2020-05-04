@@ -5,7 +5,6 @@ import com.pathus.covid19bot.model.StatisticsOut;
 import com.pathus.covid19bot.repository.IStatisticsRepository;
 import com.pathus.covid19bot.service.IDataService;
 import com.pathus.covid19bot.service.ITwitterService;
-import com.pathus.covid19bot.util.Constants;
 import com.pathus.covid19bot.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,7 +54,7 @@ public class TwitterService implements ITwitterService {
         StatisticsOut statistics = dataService.getStatistics(url);
         String message = Util.createTweetMessage(statistics, hashtag);
         LOGGER.info("message du tweet {}", message);
-        postTweet(message, Constants.DEFAULT_IMG_PATH);
+       // postTweet(message, Constants.DEFAULT_IMG_PATH);
         LOGGER.info("tweet envoyé {}", statistics.getNewStatistics().getUpdatedTime());
         updateStatistics(statistics);
     }
