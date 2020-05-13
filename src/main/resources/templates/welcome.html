@@ -28,7 +28,7 @@
             <div class="col-md-4 my-auto">
                 <div class="card">
                     <div class="container">
-                        <span th:text="${todayCases}" class="css-tt00ea text-yellow"></span>
+                        <span th:text="${today.cases}" class="css-tt00ea text-yellow"></span>
                         <p class="css-16iau3h">Cas du jour</p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="container">
-                   <span th:text="${todayRecovered}" class="css-tt00ea text-success"></span>
+                   <span th:text="${today.recovered}" class="css-tt00ea text-success"></span>
                         <p class="css-16iau3h">Guéris du jour</p>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="container">
-                        <span th:text="${todayDeaths}" class="css-tt00ea text-danger"></span>
+                        <span th:text="${today.deaths}" class="css-tt00ea text-danger"></span>
                         <p class="css-16iau3h">Décès du jour</p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
             <div class="col-md-4 my-auto">
                 <div class="card">
                     <div class="container">
-                        <span th:text="${statistics.cases}" class="css-tt00ea text-yellow"></span>
+                        <span th:text="${total.cases}" class="css-tt00ea text-yellow"></span>
                         <p class="css-16iau3h">Infectés</p>
                     </div>
                 </div>
@@ -62,7 +62,7 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="container">
-                        <span th:text="${statistics.recovered}" class="css-tt00ea text-success"></span>
+                        <span th:text="${total.recovered}" class="css-tt00ea text-success"></span>
                         <p class="css-16iau3h">Guéris</p>
                     </div>
                 </div>
@@ -70,13 +70,13 @@
             <div class="col-md-4">
                 <div class="card">
                     <div class="container">
-                        <span th:text="${statistics.deaths}"  class="css-tt00ea text-danger"></span>
+                        <span th:text="${total.deaths}"  class="css-tt00ea text-danger"></span>
                         <p class="css-16iau3h">Décès</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-4" style="display: flex; justify-content: flex-end"><small class="text-light text-right text-muted">Dernière mise à jour: <span th:text="${statistics.updatedTime}"></span></small></div>
+        <div class="mt-4" style="display: flex; justify-content: flex-end"><small class="text-light text-right text-muted">Dernière mise à jour: <span th:text="${total.updatedTime}"></span></small></div>
     </div>
 
 </main>

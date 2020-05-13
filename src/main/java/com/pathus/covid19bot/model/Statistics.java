@@ -24,6 +24,9 @@ public class Statistics {
     private String updatedTime;
 
     public Statistics() {
+        cases = 0;
+        deaths = 0;
+        recovered = 0;
     }
 
     public Long getId() {
