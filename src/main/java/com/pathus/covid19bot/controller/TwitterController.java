@@ -29,11 +29,20 @@ public class TwitterController {
         Statistics newStats = statistics.getNewStatistics();
         Statistics oldStats = statistics.getPreviousStatistics();
 
-        model.addAttribute("statistics", statistics.getNewStatistics());
-        model.addAttribute("todayCases", newStats.getCases()-oldStats.getCases());
-        model.addAttribute("todayDeaths", newStats.getDeaths()-oldStats.getDeaths());
-        model.addAttribute("todayRecovered", newStats.getRecovered()-oldStats.getRecovered());
+        model.addAttribute("total", newStats);
+        model.addAttribute("today", getTodayStatistics(newStats, oldStats));
 
         return "welcome";
+    }
+
+    private Statistics getTodayStatistics(Statistics newStats, Statistics oldStats) {
+        Statistics statistics =  new Statistics();
+        if (oldStats != null) {
+            statistics.setCases(newStats.getCases()-oldStats.getCases());
+            statistics.setDeaths(newStats.getDeaths()-oldStats.getDeaths());
+            statistics.setRecovered(newStats.getRecovered()-oldStats.getRecovered());
+            statistics.setUpdatedTime(newStats.getUpdatedTime());
+        }
+        return statistics;
     }
 }
