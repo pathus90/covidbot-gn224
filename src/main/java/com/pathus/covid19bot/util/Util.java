@@ -19,7 +19,7 @@ public final class Util {
 
         Statistics newStatistics = statistics.getNewStatistics();
         Statistics previousStatistics = statistics.getPreviousStatistics();
-        builder.append(String.format("Toutes les statistiques COVID19 à la date du %s en Guinée  🇬🇳", getNow(DatePattern.DATE_PATTERN_DDMMYYY.getFormat())));
+        builder.append(String.format("Toutes les statistiques COVID19 à la date du %s en Guinée  🇬🇳", getTodayDate()));
         builder.append("\n");
         builder.append(getMessage("-Infectés", newStatistics.getCases(), previousStatistics!= null ?previousStatistics.getCases():0));
         builder.append(getMessage("-Guéris",newStatistics.getRecovered(), previousStatistics!=null ? previousStatistics.getRecovered(): 0));
@@ -36,9 +36,32 @@ public final class Util {
     }
 
     public static Statistics parseJsonObject(String jsonStr) {
-        JSONObject localObject = new JSONObject(jsonStr).getJSONObject(Constants.LOCAL);
+        JSONObject localObject = new JSONObject(jsonStr);
         String now = getNow(DatePattern.DATE_PATTERN_DDMMYYY_HHMMSS.getFormat());
         return new Statistics(localObject.getInt(CONFIRMED), localObject.getInt(DEATHS), localObject.getInt(RECOVERED), now);
+    }
+    private static String getTodayDate() {
+        String date = getNow(DatePattern.DATE_PATTERN_DDMMYYY.getFormat());
+        String [] dates = date.split("-");
+        return String.format("%s %s %s", dates[0],  getMoisChaine(Integer.parseInt(dates[1].substring(1))), dates[2]);
+    }
+
+    private static String getMoisChaine(int mois){
+        switch(mois){
+            case 1 : return "Janvier";
+            case 2 : return "Février";
+            case 3 : return "Mars";
+            case 4 : return "Avril";
+            case 5 : return "Mai";
+            case 6 : return "Juin";
+            case 7 : return "Juillet";
+            case 8 : return "Août";
+            case 9 : return "Septembre";
+            case 10 : return "Octobre";
+            case 11 : return "Novembre";
+            case 12 :
+            default :return"Décembre";
+        }
     }
 
     private static String getMessage(String label, int newCase, int oldCase) {

@@ -14,7 +14,7 @@ public final class Constants {
     /**
      * the confirmed property inside the json
      */
-    public static final String CONFIRMED = "confirmed";
+    public static final String CONFIRMED = "cases";
     /**
      * the deaths property inside the json
      */
